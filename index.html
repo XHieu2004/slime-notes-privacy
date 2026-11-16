@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slime Notes — Privacy Policy / Chính sách Quyền riêng tư</title>
+  <style>
+    :root {
+      --bg: #f3faf6;
+      --card: #ffffff;
+      --border: #d7e8df;
+      --ink: #14211c;
+      --sub: #475b53;
+      --accent: #1f7a4f;
+      --pill: #e3f6ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101b16;
+        --card: #182620;
+        --border: #2a3e35;
+        --ink: #e6f0eb;
+        --sub: #adc2b8;
+        --accent: #7ce0ae;
+        --pill: #1f392d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+    main {
+      max-width: 820px;
+      margin: 36px auto;
+      padding: 0 20px 48px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+    }
+    .meta {
+      color: var(--sub);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    button.active {
+      background: var(--pill);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    section.card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 18px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+    ul {
+      padding-left: 20px;
+      margin: 10px 0 0;
+    }
+    li + li { margin-top: 8px; }
+    code {
+      background: var(--pill);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+    .hidden { display: none; }
+    footer {
+      color: var(--sub);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Slime Notes</h1>
+        <div class="meta">Publisher: <strong>K.Shadow</strong> &middot; Effective / Hiệu lực: 2026-11-16</div>
+      </div>
+      <div class="lang-switch" role="tablist" aria-label="Language">
+        <button id="btn-vi" class="active" onclick="setLang('vi')">Tiếng Việt</button>
+        <button id="btn-en" onclick="setLang('en')">English</button>
+      </div>
+    </header>
+
+    <div id="lang-vi">
+      <section class="card">
+        <h2>1. Cam kết xử lý cục bộ và không gửi dữ liệu ra ngoài</h2>
+        <p>
+          <strong>Slime Notes</strong> được thiết kế để hoạt động hoàn toàn ngoại tuyến trên thiết bị Windows của bạn.
+          Ứng dụng không sử dụng tài khoản trực tuyến, không thu thập dữ liệu sử dụng, không hiển thị quảng cáo và
+          cam kết <strong>không gửi nội dung ghi chú hay dữ liệu cá nhân ra ngoài qua Internet</strong>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Lấy hình nền desktop và cửa sổ phục vụ hiệu ứng kính</h2>
+        <ul>
+          <li>
+            Để tạo hiệu ứng khúc xạ thủy tinh lỏng (Liquid Glass) và thân gel trong suốt theo thời gian thực phía sau ghi chú nổi,
+            ứng dụng sử dụng các API đồ họa tiêu chuẩn của Windows (<code>Desktop Duplication</code> / Direct3D 11 và tùy chọn
+            <code>Windows.Graphics.Capture</code> khi bạn bật <em>Chế độ quay/chụp</em>).
+          </li>
+          <li>
+            Dữ liệu hình ảnh bề mặt màn hình được xử lý cục bộ trong bộ nhớ của thiết bị (GPU/RAM) để tính toán hiệu ứng khúc xạ,
+            làm mờ và hiển thị xem trước trên máy của bạn; ứng dụng không ghi lén và không truyền hình ảnh màn hình ra ngoài.
+          </li>
+          <li>
+            Hình ảnh chỉ được lưu ra tệp <code>.bmp</code> trong thư mục <code>Pictures\SlimeNotes</code> khi bạn chủ động nhấn
+            phím tắt chụp ảnh <code>F12</code>.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. Truy cập tệp do người dùng chọn và lưu trữ dữ liệu</h2>
+        <ul>
+          <li>
+            <strong>Thư mục dữ liệu của ứng dụng:</strong> Với bản cài đặt từ Microsoft Store, toàn bộ ghi chú, lịch sử sửa đổi (<code>history</code>),
+            ghi chú đã xóa (<code>deleted-notes</code>), lịch nhắc, cài đặt giao diện, đường va chạm desktop và bản sao hình nền/âm thanh nhắc nhở được lưu cục bộ
+            trong thư mục <code>LocalState</code> riêng của gói ứng dụng trên máy bạn.
+          </li>
+          <li>
+            <strong>Tệp do bạn chủ động chọn:</strong> Ứng dụng chỉ đọc các tệp ảnh (<code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.bmp</code>),
+            video nền (<code>.mp4</code>), âm thanh chuông báo (<code>.wav</code>, <code>.mp3</code>, <code>.wma</code>) hoặc thư mục nhập bản sao
+            mà bạn tự chọn thông qua hộp thoại chuẩn của Windows.
+          </li>
+          <li>
+            <strong>Xuất tệp &amp; sao lưu:</strong> Ảnh chụp <code>F12</code> được lưu vào thư mục <code>Pictures\SlimeNotes</code> của Windows
+            (tôn trọng vị trí thư mục Pictures hiện tại kể cả OneDrive hoặc ổ đĩa khác). Khi bạn chọn <em>Xuất bản sao thư viện</em>,
+            dữ liệu thư viện được sao lưu vào đúng thư mục bạn chỉ định.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. Khởi động cùng Windows và gỡ cài đặt</h2>
+        <p>
+          Tùy chọn <em>Khởi động cùng Windows</em> sử dụng cơ chế <code>StartupTask</code> chuẩn của Windows để khôi phục ghi chú đang ghim khi đăng nhập
+          và luôn tuân thủ trạng thái bật/tắt do bạn điều chỉnh trong Windows Settings hoặc Task Manager.
+          Khi bạn gỡ cài đặt ứng dụng Microsoft Store, Windows sẽ xóa thư mục <code>LocalState</code> của gói;
+          vì vậy hãy dùng chức năng <em>Quản lý dữ liệu → Xuất bản sao thư viện…</em> để sao lưu trước khi gỡ.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>5. Liên hệ</h2>
+        <p>Nhà phát hành: <strong>K.Shadow</strong> &middot; Mã sản phẩm Store: <code>9PN5RCMZRKWK</code> &middot; Email hỗ trợ: <a href="mailto:hieuxuan20041906@gmail.com">hieuxuan20041906@gmail.com</a></p>
+      </section>
+    </div>
+
+    <div id="lang-en" class="hidden">
+      <section class="card">
+        <h2>1. Offline-First &amp; No Data Transmission</h2>
+        <p>
+          <strong>Slime Notes</strong> is designed to work completely offline on your Windows device.
+          It requires no online account, collects no usage telemetry or analytics, shows no ads, and
+          commits <strong>never to transmit your notes or personal data over the Internet</strong>.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>2. Desktop &amp; Window Image Capture for Glass Effects</h2>
+        <ul>
+          <li>
+            To render real-time Liquid Glass refraction behind floating notes, Slime Notes reads underlying desktop or window imagery using standard Windows APIs
+            (<code>Desktop Duplication</code> / Direct3D 11, and optional <code>Windows.Graphics.Capture</code> when you enable <em>Recording/Screenshot mode</em>).
+          </li>
+          <li>
+            Captured surface frames are processed locally in device memory (GPU/RAM) to compute glass refraction, blur, and preview rendering on your PC;
+            the app never secretly records your screen and never transmits display images externally.
+          </li>
+          <li>
+            A snapshot image (<code>.bmp</code>) is saved to <code>Pictures\SlimeNotes</code> only when you explicitly press <code>F12</code> (or your configured snapshot key).
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>3. User-Selected Files &amp; Local Storage</h2>
+        <ul>
+          <li>
+            <strong>Application Data:</strong> In the Microsoft Store version, all notes, edit history (<code>history</code>), deleted notes (<code>deleted-notes</code>),
+            reminders, appearance preferences, desktop collision paths, and copied backdrop/alarm media are stored locally inside the app package's isolated <code>LocalState</code> folder.
+          </li>
+          <li>
+            <strong>User-Picked Media &amp; Backups:</strong> Slime Notes only accesses images (<code>.png</code>, <code>.jpg</code>, <code>.jpeg</code>, <code>.bmp</code>),
+            MP4 videos (<code>.mp4</code>), audio clips (<code>.wav</code>, <code>.mp3</code>, <code>.wma</code>), or backup folders that you explicitly choose via the Windows File/Folder Picker.
+          </li>
+          <li>
+            <strong>Exports &amp; Snapshots:</strong> Manual <code>F12</code> snapshots are saved under your Windows <code>Pictures\SlimeNotes</code> folder
+            (using Windows Known Folders, including redirected OneDrive or custom drive locations), and library backups are exported only to the folder you select.
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4. Startup Task &amp; Data Retention</h2>
+        <p>
+          The optional <em>Start with Windows</em> feature uses the standard Windows <code>StartupTask</code> API solely to restore pinned desktop notes on sign-in and respects
+          enable/disable changes made in Windows Settings or Task Manager. Uninstalling the Microsoft Store package removes its isolated <code>LocalState</code> directory;
+          please use <em>Manage data → Export library backup…</em> before uninstalling if you want to keep a copy of your notes.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>5. Contact</h2>
+        <p>Publisher: <strong>K.Shadow</strong> &middot; Microsoft Store ID: <code>9PN5RCMZRKWK</code> &middot; Support: <a href="mailto:hieuxuan20041906@gmail.com">hieuxuan20041906@gmail.com</a></p>
+      </section>
+    </div>
+
+    <footer>
+      Slime Notes &middot; Package Identity: <code>K.Shadow.SlimeNotes</code>
+    </footer>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('lang-vi').classList.toggle('hidden', lang !== 'vi');
+      document.getElementById('lang-en').classList.toggle('hidden', lang !== 'en');
+      document.getElementById('btn-vi').classList.toggle('active', lang === 'vi');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+  </script>
+</body>
+</html>
